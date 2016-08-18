@@ -32,7 +32,7 @@
     "glob"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jokeyrhyme/argv-auto-glob.js.git"
