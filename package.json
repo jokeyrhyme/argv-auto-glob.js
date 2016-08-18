@@ -26,7 +26,11 @@
     "lib"
   ],
   "homepage": "https://github.com/jokeyrhyme/argv-auto-glob.js#readme",
-  "keywords": [],
+  "keywords": [
+    "argv",
+    "cli",
+    "glob"
+  ],
   "license": "MIT",
   "main": "index.js",
   "repository": {
