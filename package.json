@@ -1,7 +1,7 @@
 {
   "name": "argv-auto-glob",
   "description": "automatically expand globs (cross-platform) for the `process.argv` array (or similar)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/argv-auto-glob.js/issues"
   },
