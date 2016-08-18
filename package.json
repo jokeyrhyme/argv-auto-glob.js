@@ -2,34 +2,41 @@
   "name": "argv-auto-glob",
   "description": "automatically expand globs (cross-platform) for the `process.argv` array (or similar)",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint --fix --cache .",
-    "flow_check": "flow check || exit 0",
-    "fixpack": "fixpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jokeyrhyme/argv-auto-glob.js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/argv-auto-glob.js/issues"
   },
-  "homepage": "https://github.com/jokeyrhyme/argv-auto-glob.js#readme",
-  "engines": {
-    "node": ">=6",
-    "npm": ">=3"
-  },
   "devDependencies": {
+    "ava": "^0.16.0",
     "eslint": "^3.3.1",
     "eslint-config-standard": "^5.3.5",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
     "fixpack": "^2.3.1",
-    "flow-bin": "^0.30.0"
+    "flow-bin": "^0.30.0",
+    "nyc": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/jokeyrhyme/argv-auto-glob.js#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokeyrhyme/argv-auto-glob.js.git"
+  },
+  "scripts": {
+    "ava": "nyc ava",
+    "eslint": "eslint --fix --cache .",
+    "fixpack": "fixpack",
+    "flow_check": "flow check || exit 0",
+    "nyc": "nyc check-coverage",
+    "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
+    "test": "npm run ava && npm run nyc"
   }
 }
