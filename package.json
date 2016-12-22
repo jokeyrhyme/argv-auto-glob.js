@@ -2,6 +2,7 @@
   "name": "argv-auto-glob",
   "description": "automatically expand globs (cross-platform) for the `process.argv` array (or similar)",
   "version": "1.0.1",
+  "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/argv-auto-glob.js/issues"
   },
@@ -9,14 +10,18 @@
     "glob": "^7.0.5"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
-    "eslint": "^3.3.1",
-    "eslint-config-standard": "^5.3.5",
-    "eslint-plugin-promise": "^2.0.1",
-    "eslint-plugin-standard": "^2.0.0",
+    "ava": "^0.17.0",
+    "eslint": "^3.12.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-node": "^3.0.5",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "fixpack": "^2.3.1",
-    "flow-bin": "^0.30.0",
-    "nyc": "^8.1.0"
+    "flow-bin": "^0.37.0",
+    "nyc": "^10.0.0"
+  },
+  "directories": {
+    "test": "test"
   },
   "engines": {
     "node": ">=4",
@@ -41,7 +46,7 @@
     "ava": "nyc ava",
     "eslint": "eslint --fix --cache .",
     "fixpack": "fixpack",
-    "flow_check": "flow check || exit 0",
+    "flow_check": "flow check",
     "nyc": "nyc check-coverage",
     "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
     "test": "npm run ava && npm run nyc"
