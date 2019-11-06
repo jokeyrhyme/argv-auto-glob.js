@@ -7,7 +7,7 @@
     "url": "https://github.com/jokeyrhyme/argv-auto-glob.js/issues"
   },
   "dependencies": {
-    "glob": "^7.0.5"
+    "glob": "^7.1.6"
   },
   "devDependencies": {
     "ava": "^0.24.0",
